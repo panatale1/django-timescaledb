@@ -9,7 +9,7 @@ class TimescaleModel(models.Model):
     TimescaleDateTimeField already present. This is an abstract class it should 
     be inheritted by another class for use.
     """
-    time = TimescaleDateTimeField(interval="1 day")
+    time = TimescaleDateTimeField(interval="1 day", primary_key=True)
 
     objects = models.Manager()
     timescale = TimescaleManager()
